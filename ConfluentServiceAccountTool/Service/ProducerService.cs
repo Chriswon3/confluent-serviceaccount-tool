@@ -4,7 +4,7 @@ namespace ConfluentServiceAccountTool.Service;
 
 public class ProducerService
 {
-    public async Task ProduceEvents(KafkaConfig kafkaConfig)
+    public void ProduceEvents(KafkaConfig kafkaConfig)
     {
         
     }
