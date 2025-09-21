@@ -1,3 +1,4 @@
+using Confluent.SchemaRegistry;
 using ConfluentServiceAccountTool.Enum;
 using ConfluentServiceAccountTool.Model;
 
@@ -9,6 +10,7 @@ public class ConfigurationInputsService()
     {
         KafkaConfig kafkaConfig = new()
         {
+            BootstrapServer = ValidateInput("Please enter your Bootstrap Server", InputServiceEnum.KafkaConfig),
             ServiceAccountId = ValidateInput("Please enter your Service Account ID: ", InputServiceEnum.KafkaConfig),
             ServiceAccountSecret = ValidateInput("Please enter your Service Account Secret: ", InputServiceEnum.KafkaConfig),
             Topic = ValidateInput("Please enter the Kafka Topic: ", InputServiceEnum.KafkaConfig),

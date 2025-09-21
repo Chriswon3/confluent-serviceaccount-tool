@@ -4,7 +4,7 @@ namespace ConfluentServiceAccountTool;
 
 public class Handler
 {
-    public void HandleAsync()
+    public async Task HandleAsync()
     {
         ConfigurationInputsService inputsService = new ConfigurationInputsService();
 
@@ -24,7 +24,7 @@ public class Handler
             ProducerService producer = new ProducerService();
             Console.WriteLine("Producer Service has been selected. Commencing testing of producing events");
 
-            producer.ProduceEvents(kafkaConfig);
+            await producer.ProduceEvents(kafkaConfig);
         }
         
     }

@@ -1,16 +1,13 @@
-﻿using ConfluentServiceAccountTool.Model;
-
-namespace ConfluentServiceAccountTool;
+﻿namespace ConfluentServiceAccountTool;
 
 public class Program
 {
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
         Console.WriteLine("This confluent service account tool is used to consume/produce from/to confluent kafka topics. Please enter the parameters required:");
         
         Handler handler = new Handler();
         
-        handler.HandleAsync();
+        await handler.HandleAsync();
     }
-
 }
