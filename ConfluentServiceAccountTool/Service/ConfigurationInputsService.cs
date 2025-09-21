@@ -1,4 +1,3 @@
-using Confluent.SchemaRegistry;
 using ConfluentServiceAccountTool.Enum;
 using ConfluentServiceAccountTool.Model;
 

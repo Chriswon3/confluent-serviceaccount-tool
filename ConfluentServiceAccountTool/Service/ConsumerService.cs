@@ -1,6 +1,5 @@
 using ConfluentServiceAccountTool.Model;
 using Confluent.Kafka;
-using Confluent.SchemaRegistry;
 
 namespace ConfluentServiceAccountTool.Service;
 
